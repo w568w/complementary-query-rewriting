@@ -1,0 +1,20 @@
+[dataset]
+name = "nfcorpus"
+corpus_source = "BeIR/nfcorpus"
+normalized_queries = "data/nfcorpus/queries.jsonl"
+normalized_feedback = "data/nfcorpus/feedback.jsonl"
+
+[difficulty]
+metric = "ndcg"
+cutoff = 25
+maximum_ndcg = 0.1
+
+[split]
+group_key = "source_id"
+exclude_exact_query_overlap = true
+seed = 42
+
+[evaluation]
+metric = "ndcg"
+cutoffs = [10, 25]
+cluster_key = "source_id"

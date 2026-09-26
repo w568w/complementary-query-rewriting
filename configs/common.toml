@@ -1,0 +1,62 @@
+[model]
+base = "Qwen/Qwen3-8B"
+enable_thinking = false
+temperature = 0.6
+top_p = 0.95
+top_k = 20
+max_new_tokens = 128
+prompt_style = "scope"
+
+[retrieval]
+backend = "hybrid"
+dense_encoder = "BAAI/bge-m3"
+sparse_encoder = "bm25s-with-english-stemming"
+fusion = "rrf"
+rank_constant = 60
+rank_origin = 0
+cutoff = 25
+
+[fusion]
+method = "adaptive"
+rank_constant = 1
+rank_origin = 1
+agreement = "reciprocal-rank-weighted-jaccard"
+
+[memory]
+top_k = 3
+max_positive_documents = 3
+max_retrieved_documents = 3
+max_document_characters = 1500
+
+[training]
+seed = 42
+algorithm = "grpo"
+loss_type = "bnpo"
+prompt_style = "factorized"
+max_prompt_length = 512
+max_steps = 300
+learning_rate = 1e-5
+lr_scheduler = "constant"
+num_generations = 8
+effective_batch_size = 128
+lora_rank = 64
+lora_alpha = 128
+lora_dropout = 0.05
+clip_lower = 0.8
+clip_upper = 1.2
+clip_epsilon = 0.2
+advantage_normalization_epsilon = 1e-4
+kl_coefficient = 0.0
+
+[reward]
+retrieval_weight = 1.0
+format_weight = 0.1
+length_weight = 0.1
+soft_token_limit = 64
+hard_token_limit = 128
+
+[evaluation]
+generation_repetitions = 8
+bootstrap_draws = 10000
+bootstrap_seed = 42
+seed = 42

@@ -1,0 +1,15 @@
+{
+  "metric": "binary nDCG@25",
+  "samples_per_path": 8,
+  "source_sha256": {
+    "primary": "8466c45cac37990170e1ef25bfc99eec7b554c5efb7beab6e86f21a083d3f7ce",
+    "base": "a22a764973fb0581503bea93d91bc14402334947bbd8cb714aaad898fa1bd58c",
+    "fusion": "ad159967f534c10b63fe48d00c034f43c49ba92c6126900e6d9bc45ea26d42ea",
+    "intervals": "d3a7fc7323f13916264c516c30b9983ea28ca3d841f10c10f08ff2821beddc19"
+  },
+  "output_sha256": {
+    "intervals.json": "d3a7fc7323f13916264c516c30b9983ea28ca3d841f10c10f08ff2821beddc19",
+    "marco_query_scores.jsonl": "2cdb562859e1caf580d29a772c186198c1c2e91cda6b7782e667c87ac3d019af",
+    "nfcorpus_query_scores.jsonl": "eedfa3337376c8ea0418e2d224ad0bfbd58e9d741146126ee2b1060cd9770a31"
+  }
+}

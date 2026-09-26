@@ -1,0 +1,19 @@
+[dataset]
+name = "aol4ps"
+corpus_source = "official AOL4PS distribution"
+normalized_queries = "data/aol4ps/queries.jsonl"
+normalized_feedback = "data/aol4ps/feedback.jsonl"
+history_order = "timestamp"
+
+[retrieval]
+backend = "candidate_bge_m3"
+
+[difficulty]
+metric = "best_relevant_rank"
+minimum_rank = 4
+
+[evaluation]
+metric = "ndcg"
+cutoffs = [10]
+cluster_key = "user_id"
+history_fractions = [0.0, 0.25, 0.5, 0.75, 1.0]

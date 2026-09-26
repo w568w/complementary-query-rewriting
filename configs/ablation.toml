@@ -1,0 +1,10 @@
+# Overlay after common.toml and the dataset configuration.
+
+[memory]
+writer_format = "entities"
+refine_scope = true
+
+[evaluation]
+seed = 48
+bootstrap_seed = 42
+bootstrap_draws = 100000

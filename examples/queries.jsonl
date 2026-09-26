@@ -1,0 +1,3 @@
+{"query_id":"q1","source_id":"topic-a","query":"term alpha meaning","relevant_doc_ids":["d1"],"original_ranking_doc_ids":["d3","d4","d1"]}
+{"query_id":"q2","source_id":"topic-b","query":"how to apply beta rule","relevant_doc_ids":["d2"],"original_ranking_doc_ids":["d5","d6","d2"]}
+{"query_id":"q3","source_id":"topic-c","query":"gamma eligibility","relevant_doc_ids":["d3"],"original_ranking_doc_ids":["d1","d2","d3"]}
